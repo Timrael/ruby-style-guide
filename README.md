@@ -441,6 +441,40 @@ You can generate a PDF or an HTML copy of this guide using
     While several Ruby books suggest the first style, the second is much more prominent
     in practice (and arguably a bit more readable).
 
+* Avoid unnecessary curly braces when passing hashes to methods
+
+    ``` ruby
+    # bad
+    example({a: 1, b: 2})
+
+    # good
+    example(a: 1, b: 2)
+
+    # bad
+    example(:first_argument, {a: 1, b: 2})
+
+    # good
+    example(:first_argument, a: 1, b: 2)
+    ```
+
+    When passing two hashes, for example when calling
+    `ActiveRecord#update_all`, wrap both hashes in curly braces. Or
+    better yet, extract your hashes to locals or methods.
+
+    ``` ruby
+    # bad
+    update_all({name: 'Changed'}, id: [1, 2, 3])
+
+    # good
+    update_all({name: 'Changed'}, {id: [1, 2, 3]})
+
+    # even better
+    attributes = {name: 'Changed'}
+    conditions = {id: [1, 2, 3]}
+
+    update_all(attributes, conditions)
+    ```
+
 * Avoid line continuation (\\) where not required. In practice, avoid using
   line continuations at all.
 

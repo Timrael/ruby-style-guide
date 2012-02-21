@@ -85,10 +85,9 @@ You can generate a PDF or an HTML copy of this guide using
 
         ```$ git config --global core.autocrlf true```
 
-* Use spaces around operators, after commas, colons and semicolons, around `{`
-  and before `}`. Whitespace might be (mostly) irrelevant to the Ruby
-  interpreter, but its proper use is the key to writing easily
-  readable code.
+* Use spaces around operators, after commas, colons and semicolons.
+  Whitespace might be (mostly) irrelevant to the Ruby interpreter, but
+  its proper use is the key to writing easily readable code.
 
     ```Ruby
     sum = 1 + 2
@@ -105,6 +104,26 @@ You can generate a PDF or an HTML copy of this guide using
 
     # good
     e = M * c**2
+    ```
+
+* Use a space before `{` and after `}` with blocks.
+
+    ``` ruby
+    # bad
+    array.map{|object| " -- object -- "}
+
+    # good
+    array.map { |object| " -- #{object} -- " }
+    ```
+
+* No spac after `{` or before `}` when declaring a hash.
+
+    ``` ruby
+    # bad
+    hash = { one: 1, two: 2, three: 3 }
+
+    # good
+    hash = {one: 1, two: 2, three: 3}
     ```
 
 * No spaces after `(`, `[` or before `]`, `)`.

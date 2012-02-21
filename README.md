@@ -858,14 +858,14 @@ strings.
     STATES = %w(draft open closed)
     ```
 
-* Use an array if any of your strings contain a space.
+* Use an literal array if any of your strings contain a space.
 
     ```Ruby
     # bad
-    STATES = %w(Ruby Python Object\ Lisp)
+    LANGUAGES = %w(Ruby Python Object\ Lisp)
 
     # good
-    languages = ['Ruby', 'Python', 'Object Lisp']
+    LANGUAGES = ['Ruby', 'Python', 'Object Lisp']
     ```
 
 * Avoid the creation of huge gaps in arrays.

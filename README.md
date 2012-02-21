@@ -493,10 +493,10 @@ syntax.
 
     ```Ruby
     # bad
-    hash = { :one => 1, :two => 2 }
+    hash = {:one => 1, :two => 2}
 
     # good
-    hash = { one: 1, two: 2 }
+    hash = {one: 1, two: 2}
     ```
 
 * Use the new lambda literal syntax.
@@ -830,10 +830,10 @@ strings.
 
     ```Ruby
     # bad
-    hash = { 'one' => 1, 'two' => 2, 'three' => 3 }
+    hash = {'one' => 1, 'two' => 2, 'three' => 3}
 
     # good
-    hash = { one: 1, two: 2, three: 3 }
+    hash = {one: 1, two: 2, three: 3}
     ```
 
 * Avoid the use of mutable object as hash keys.
@@ -842,10 +842,10 @@ syntax.
 
     ```Ruby
     # bad
-    hash = { :one => 1, :two => 2, :three => 3 }
+    hash = {:one => 1, :two => 2, :three => 3}
 
     # good
-    hash = { one: 1, two: 2, three: 3 }
+    hash = {one: 1, two: 2, three: 3}
     ```
 
 * Rely on the fact that hashes in 1.9 are ordered.

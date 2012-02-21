@@ -116,7 +116,7 @@ You can generate a PDF or an HTML copy of this guide using
     array.map { |object| " -- #{object} -- " }
     ```
 
-* No spac after `{` or before `}` when declaring a hash.
+* No space after `{` or before `}` when declaring a hash.
 
     ``` ruby
     # bad

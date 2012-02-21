@@ -739,8 +739,10 @@ in inheritance.
 in accordance with their intended usage. Don't go off leaving
 everything `public` (which is the default). After all we're coding
 in *Ruby* now, not in *Python*.
-* Indent the `public`, `protected`, and `private` methods as much the
-  method definitions they apply to. Leave one blank line above them.
+* Indent the `public`, `protected`, and `private` methods as much as the
+  method definitions they apply to. Leave one blank line above and below
+  them as this improves readability.
+* Avoid direct use of `public` method. You don't need it.
 
     ```Ruby
     class SomeClass
@@ -749,6 +751,7 @@ in *Ruby* now, not in *Python*.
       end
 
       private
+
       def private_method
         # ...
       end
